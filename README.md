@@ -1,4 +1,4 @@
-Cycle Stock Availability Optimization (US & Canada)
+#Cycle Stock Availability Optimization (US & Canada)
 
 This project rebuilds a multi-year, Excel-based cycle stock dispatch and availability analysis in Python to create a transparent, reproducible, SLA-driven view of service performance across U.S. and Canadian distribution operations.
 
