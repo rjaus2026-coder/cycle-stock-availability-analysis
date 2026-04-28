@@ -2,6 +2,8 @@
 
 This project rebuilds a multi-year, Excel-based cycle stock dispatch and availability analysis in Python to create a transparent, reproducible, SLA-driven view of service performance across U.S. and Canadian distribution operations.
 
+The original performance analysis and improvement calculations were developed in Excel. The Python rebuild preserves the operating logic and creates a cleaner, repeatable framework for reviewing availability, dispatch performance, and seasonal delay reduction.
+
 The analysis focuses on availability rather than speed alone and explicitly accounts for real operating constraints such as cutoff times, weekends, replenishment handoffs, and regional service rules.
 
 ## Objective
@@ -66,15 +68,21 @@ Eligible cycle stock demand lines shipped within SLA / total eligible cycle stoc
 
 The metric is calculated monthly and segmented by move code to preserve service-class integrity and avoid misleading blended averages.
 
+## Measurement Notes
+
+- The **32% reduction** represents the blended total North American cycle stock dispatch-time improvement from January 2023 to March 2025
+- The **38% U.S. reduction** is a deseasonalized U.S. cycle stock dispatch-time improvement from the 2023 baseline to 2025
+- The **25-30% Canada reduction** reflects Canadian cycle stock delay improvement under a stricter SLA
+- The **52% seasonal reduction** reflects January-February seasonal dispatch delay improvement across North America from 2023 to 2025
+- Seasonal analysis should be viewed specifically against January-February performance, not full-year averages
+
 ## Results Summary
 
 ### United States
 
 - By March 2025, cycle stock availability exceeded 86% across all move codes
 - Priority items (Move Code 1) consistently exceeded 90% availability
-- From 2023 to 2025, deseasonalized average dispatch time improved by approximately 53% overall
-- Move Code 2 improved approximately 58%
-- Move Code 3 improved approximately 67%
+- U.S. cycle stock dispatch time reduced by approximately 38%, deseasonalized, versus the 2023 baseline
 - Early 2024 performance deterioration highlighted the limits of the initial planning approach
 - A second, more disciplined planning iteration, combined with stronger master data governance, drove sustained improvement in 2025
 
@@ -82,16 +90,22 @@ The metric is calculated monthly and segmented by move code to preserve service-
 
 - Strong availability was achieved under a stricter baseline SLA
 - Performance showed lower volatility and earlier stabilization than the U.S.
-- From 2023 to 2025, deseasonalized dispatch performance improved approximately 39%
-- January-February seasonal delays improved approximately 58%
+- Canadian cycle stock delays reduced by approximately 25-30% versus the 2023 baseline
 - Stability reflected lower volume, single-warehouse execution, and reduced exposure to upstream disruption
+
+### North America
+
+- Blended total cycle stock dispatch-time performance improved by approximately 32% from January 2023 to March 2025
+- January-February seasonal dispatch delays reduced by approximately 52% across North America from 2023 to 2025
+- Inventory health and working capital efficiency improved without relying on inventory inflation
 
 ## Seasonal Findings
 
 - January-February seasonality was the primary driver of inflated annual averages
+- Seasonal reductions should be assessed by comparing January-February performance from 2023 to January-February performance in 2025
 - Canada showed a steady seasonal recovery from 2023 to 2025
 - The U.S. experienced its weakest seasonal performance in early 2024 due to poor GDC replenishment execution and the limited effectiveness of the initial planning solution
-- Post-intervention enforcement materially reduced seasonal volatility in 2025
+- Post-intervention enforcement materially reduced seasonal volatility in 2025, contributing to the approximately 52% January-February dispatch delay reduction across North America
 
 ## Key Takeaways
 
